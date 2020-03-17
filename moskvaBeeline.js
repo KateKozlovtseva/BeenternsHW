@@ -3,16 +3,11 @@ const wd = require("selenium-webdriver");
 const {Builder, Key, By, until} = wd;
 const assert = require("assert");
 
-//let costInputs = await driver.findElement(By.xpath("input[@inputmode = 'numeric']"));
-//let costSort = await driver.findElement(By.xpath("div[contains(@class,'InlineSet_doubleSpacing')] / div[.//span[text()='Цене']]"));
-//let name = await driver.findElements(By.xpath("div[contains(@class,'ProductCard_headerMobile')]"));
-//let cost = await driver.findElement(By.xpath("div[contains(@class,'component styles')]//div[contains(text(),'₽')]"));
-//let buttonBuy = await driver.findElements(By.xpath("button[contains(@class,'BuyButtonLayout_button')]"));
-//await buttonBuy.click();
-//let cross = await driver.findElement(By.xpath("svg[contains(@class,'modify-link-after')]"));
-//await cross.click();
-//let textarea = await driver.findElement(By.xpath("div[contains(@class,'shop-basket-item-service-note')]"));
-//let away = await driver.findElement(By.xpath("span[@data-ng-click='restoreItem(item)']"))
+//let costInputs = await driver.findElement(By.xpath("//input[@inputmode = 'numeric']"));
+//let name = await driver.findElements(By.xpath("//div[contains(@class,'ProductCard_headerMobile')]"));
+//let cost = await driver.findElement(By.xpath("//div[contains(@class,'component styles')]//div[contains(text(),'₽')]"));
+//let textarea = await driver.findElement(By.xpath("//div[contains(@class,'shop-basket-item-service-note')]"));
+
 
 
 
@@ -25,6 +20,7 @@ describe("checkout Google", () => {
 
     it("Открытие страницы магазина", async()=>{
         await driver.get("https://moskva.beeline.ru/shop/");
+        await driver.sleep(4000);
         let title = await driver.getTitle();
         assert(title, "Интернет-магазин Билайн Москва - продажа сотовых телефонов, смартфонов и аксессуаров");    
         });
@@ -49,7 +45,35 @@ describe("checkout Google", () => {
         await driver.sleep(5000);
         let title = await driver.findElement(By.xpath("//h1")).getText();
         assert.equal(title, "Смартфоны производитель Nokia");
-    });     
+    }); 
+    
+    it("Отсортировать телефоны по цене", async()=>{ 
+        let costSort = await driver.findElement(By.xpath("//div[contains(@class,'FilterTabs_clickable')]"));
+        costSort.click();
+        await driver.sleep(3000);
+        let costSortactive = await driver.findElement(By.xpath("//div[contains(@class,'FilterTabs_active') and contains(@class,'FilterTabs_clickable')]")).getText();
+        assert.equal(costSortactive,"Цене");
+    });
+    
+   it("Купить телефон из списка", async()=>{ 
+        let buttonBuy = await driver.findElement(By.xpath("(//button[contains(@class,'BuyButtonLayout_button')])[7]"));
+        buttonBuy.click();
+        await driver.sleep(3000);
+        let goBack = await driver.findElement(By.xpath("//a[@onclick='QA.Beeline.PageHistory.GoPrevious();']")).getText();
+        assert.equal(goBack, "Вернуться в магазин");
+        await driver.sleep(3000);
+    });
+
+  it("Удалить телефон из корзины", async()=>{ 
+        let cross = await driver.findElement(By.xpath("//*[local-name()='svg' and contains(@class,'modify-link-after')]"));
+        cross.click();
+        await driver.sleep(3000);
+    });
+
+   it("Восстановить удаленный элемент", async()=>{ 
+        let away = await driver.findElement(By.xpath("//span[@data-ng-click='restoreItem(item)']"));
+        away.click();
+    });
 
     after(() => {
         driver.quit();
