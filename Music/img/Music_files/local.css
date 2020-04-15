@@ -8,13 +8,4 @@ body{
     color: white;
     text-transform: uppercase;
 }
-
-.button{
-    border: none;
-    border-radius: 100px;
-    text-transform: uppercase;
-    padding: 12px 48px;
-    font-size: 14px;
-}
-
 .container{}
