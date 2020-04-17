@@ -1,5 +1,46 @@
 body{
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     margin: 0;
+}
+
+.container{
+    display: flex;
+    background-color: #F5F6FA;
+}
+
+.sidebar{
+    flex-basis: 255px;
+    background-color: white;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 17px 19px;
+    justify-content: space-between;
+}
+
+h1{
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.area{
+    background-color: rgba(0, 84, 254, .04);
+    border-radius: 8px;
+}
+
+.item_area{
+    width: 195px;
+    height: 168px;
+}
+
+.text{
+    margin-bottom: 5px;
+}
+
+.text_area{
+    background-color: white;
+    border-radius: 8px;
 }
