@@ -7,7 +7,15 @@ body{
 .container{
     display: flex;
     background-color: #F5F6FA;
+    width: 100%;
 }
+.area{
+    background-color: rgba(0, 84, 254, .04);
+    border-radius: 8px;
+}
+
+
+/* Sidebar*/
 
 .sidebar{
     flex-basis: 255px;
@@ -26,11 +34,6 @@ h1{
     margin-bottom: 5px;
 }
 
-.area{
-    background-color: rgba(0, 84, 254, .04);
-    border-radius: 8px;
-}
-
 .item_area{
     width: 195px;
     height: 168px;
@@ -40,7 +43,40 @@ h1{
     margin-bottom: 5px;
 }
 
-.text_area{
+
+/* Content*/
+
+.content{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: 17px 30px;
+}
+
+.objectives{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.object{
     background-color: white;
     border-radius: 8px;
+    min-height: 185px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: 12px 14px;
+}
+
+._1{
+    margin-right: 20px;
+}
+._2{
+    margin-left: 20px;
+}
+
+.subtitle{
+    color:#4A4A4A;
+    margin: 0;
 }
