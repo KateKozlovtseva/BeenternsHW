@@ -1,0 +1,45 @@
+.speaker{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 94px;
+}
+
+.secondary_batton{
+    background-color: black;
+}
+
+.find_color{
+    display: flex;
+    flex-direction: column;
+}
+
+.color_type{
+    display: flex;
+    flex-direction: row;
+}
+
+.color_circle{
+    width: 37px;
+    height: 37px;
+    border-radius: 37px;
+    border: 1px solid #EAEAEA;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.13);
+}
+
+.active_circle{
+position: relative;
+}
+.active_circle::after{
+    width: 41px;
+    height: 41px;
+    border: 1px solid black;
+    border-radius: 40px;
+    position: absolute;
+    content:"";
+    top: -2px;
+    left: -2px;
+
+}
+
