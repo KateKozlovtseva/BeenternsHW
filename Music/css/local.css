@@ -9,7 +9,7 @@ body{
     text-transform: uppercase;
 }
 
-.button{
+button{
     border: none;
     border-radius: 100px;
     text-transform: uppercase;

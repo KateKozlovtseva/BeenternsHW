@@ -24,14 +24,14 @@
     margin-bottom: 13px;
 }
 h2{
-    margin-top: 0;
-    margin-bottom: 40px;
+    margin: 0;
     font-size: 40px;
     color: white;
 }
 .buy{
     display: flex;
     align-items: center;
+    margin-top: 40px;
 }
 
 .active_batton{

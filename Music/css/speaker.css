@@ -6,6 +6,18 @@
     padding: 0 94px;
 }
 
+h1{
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/*h1::after{
+    content: "+";
+    
+}*/
+
 .secondary_batton{
     background-color: black;
 }
@@ -26,6 +38,7 @@
     border-radius: 37px;
     border: 1px solid #EAEAEA;
     box-shadow: 0 2px 1px rgba(0, 0, 0, 0.13);
+    margin-right: 10px;
 }
 
 .active_circle{
@@ -40,6 +53,34 @@ position: relative;
     content:"";
     top: -2px;
     left: -2px;
-
 }
 
+.speaker_img{
+    position: relative;
+}
+
+.img_ovals{
+    width: 60px;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 614px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+}
+
+.oval{
+    border: none;
+    height: 10px;
+    width: 10px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background-color: #d1d1d1;
+}
+
+.activ_oval{
+    background-color: #000000;
+}
