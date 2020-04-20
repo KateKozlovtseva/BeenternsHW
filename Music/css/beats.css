@@ -5,6 +5,7 @@
     justify-content: space-between;
     padding: 0 92px;
     margin-bottom: 70px;
+    z-index: 1;
 }
 
 .beats_card{
