@@ -1,0 +1,106 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+a{
+    color: #0179FF;
+}
+
+.content{
+    width: 100%;
+}
+
+
+h1{
+    color: black;
+    font-size: 35px;
+}
+
+h2{
+    font-size: 15px;
+}
+
+
+.header{
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tabs{
+    max-width: 640px;
+    padding:0;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.tab, .tab-title {
+    display: flex;/* Выстраиваем по горизонтали */
+    flex-direction: column; 
+   }
+
+
+   .tab input[type="checkbox"] { 
+       display: none; 
+    }
+
+   .tab-title {
+    background: #F5F5F5; /* Цвет фона */
+    padding: 15px 18px; /* Поля вокруг текста */
+    border: 1px solid #E8E8E8; /* Параметры рамки */
+    border-bottom: none; /* Снизу линию убираем */
+    box-sizing: border-box;
+    display: inline;
+   }
+
+   .tab-title::before{
+       content: url(../img/Shape_right.svg);
+       margin: 20px 10px 20px 0;
+   }
+
+   .tab-content { 
+    border: 1px solid #E8E8E8; /* Параметры рамки */
+    padding: 10px 40px 10px 20px; /* Поля вокруг текста */
+    left: 0; /* Размещаем у левого края */
+    display: none; /* Прячем вкладку */
+    color: #5D5D5D;
+   }
+
+   .tab :checked ~ .tab-title::before {
+    content: url(../img/Shape_down.svg);
+    margin: 20px 6px 20px 0;
+   }
+
+   .tab :checked ~ .tab-content {
+    display: block; /* Показываем активную вкладку */
+   }
+
+   .illustration{
+       max-width: 510px;
+       margin-left: auto;
+       margin-right: auto;
+   }
+
+   .illustration img{
+       width: 100%;
+       height: auto;
+   }
+
+   @media (max-width: 320px) {
+    body{
+        margin: 0;
+    }
+
+    h1{
+        margin-left: 20px;
+    }
+    .content{
+        width: 100vw;
+    }
+
+
+
+   }
+  
