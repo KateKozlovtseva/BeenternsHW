@@ -1,0 +1,47 @@
+/*Mobile*/
+.footer{
+    background-color: #404754;
+    padding: 16px 20px;
+}
+
+.links{
+    display: flex;
+    flex-direction: column;
+}
+
+.link{
+    color: #BAC5D3;
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.copy{
+    margin-top: 10px;
+    margin-bottom: 0;
+    color: #BAC5D3;
+    font-size: 17px;
+}
+
+/*Tablet*/
+
+@media(min-width:768px){
+    .links{
+        flex-direction: row;
+    }
+
+    .link{
+        margin-right: 30px;
+        font-size: 20px;
+    }
+
+    .copy{
+        font-size: 20px;
+    }
+
+}
+
+
+/*Desktop*/
+@media(min-width:1440px){
+
+}

@@ -1,0 +1,157 @@
+/*Mobile*/
+.main{
+    width: 100%;
+    height: 480px;
+    background-image: url(../img/background_small.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.main:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 480px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.5);
+    z-index: 2;
+}
+
+.main-content{
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 4;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+.button{
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    text-decoration: none;
+    color: white;
+}
+.circle-button{
+    border: none;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+}
+
+.text-description{
+    display: flex;
+    flex-direction: column;
+}
+
+.text-block{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.header-text{
+    margin: 0;
+}
+
+.text-content{
+    margin: 0;
+    font-size: 17px;
+    color: white;
+}
+
+.img-description{
+    display: flex;
+    flex-direction: column;
+}
+
+.img-block{
+    display: flex;
+    align-items: center;
+}
+.img-block{
+    font-size: 17px;
+}
+.star{
+    margin-right: 10px;
+    width: 15px;
+    height: 15px;
+}
+
+
+/*Tablet*/
+
+@media(min-width:768px){
+    .main{
+        height: 810px;
+        background-image: url(../img/background_middle.png);
+    }
+    .main:after {
+        height: 810px;
+    }
+
+    .main-content{
+        padding: 80px 93px;
+    }
+
+    .buttons{
+        flex-direction: row;
+    }
+
+    .button{
+        padding-right: 50px;
+    }
+
+    .circle-button{
+        width: 50px;
+        height: 50px;
+        margin-right: 22px;
+    }
+
+    .description{
+        margin-top: 70px;
+    }
+
+    .text-description{
+        flex-direction: row;
+    }
+    .text-block{
+        margin-right: 80px;
+    }
+    .text-content{
+        font-size: 24px;
+    }
+    .img-description{
+        margin-top: 24px;
+    }
+    .img-block{
+        font-size: 24px;
+    }
+    .star{
+        margin-right: 20px;
+        width: 23px;
+        height: 23px;
+    }
+
+}
+
+
+/*Desktop*/
+@media(min-width:1440px){
+
+}
