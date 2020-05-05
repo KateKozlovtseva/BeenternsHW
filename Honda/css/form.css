@@ -1,5 +1,5 @@
 /*Mobile*/
-.form{
+.form-main{
     background-color: #15151D;
     width: 100%;
     padding: 40px 20px;
@@ -17,8 +17,8 @@
 .form-text{
     margin-bottom: 16px;
     font-size: 17px;
-
 }
+
 .inputs{
     display: flex;
     flex-direction: column;
@@ -60,6 +60,7 @@
     color: white;
     text-transform: uppercase;
     border-radius: 10px;
+    outline: none;
 }
 
 
@@ -70,6 +71,11 @@
    .form-content{
         text-align: center;
     } 
+
+    form-text{
+        font-size: 25px;
+    }
+
     .inputs{
         display: flex;
         flex-direction: row;
@@ -86,6 +92,7 @@
         margin-right: 30px;
     }
 
+
     .submit-button{
         height: 53px;
     }
@@ -96,5 +103,29 @@
 
 /*Desktop*/
 @media(min-width:1440px){
+    .form-content{
+        max-width: 980px;
+    }
+    .form-text{
+        font-size: 35px;
+    }
+    .input-form{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .inputs{
+        margin-right: 30px;
+    }
+
+    .fullinput{
+        margin: 0;
+        width: 300px;
+    }
+
+    .submit-button{
+        width: 300px;
+    }
 
 }

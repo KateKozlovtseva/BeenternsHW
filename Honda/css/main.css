@@ -135,12 +135,14 @@
     }
     .text-content{
         font-size: 24px;
+        margin-top: 8px;
     }
     .img-description{
         margin-top: 24px;
     }
     .img-block{
         font-size: 24px;
+        margin-top: 8px;
     }
     .star{
         margin-right: 20px;
@@ -153,5 +155,22 @@
 
 /*Desktop*/
 @media(min-width:1440px){
+    .main{
+        background-image: url(../img/background_bigl.png);
+    }
+    .main-content {
+        padding: 160px 184px;
+    }
 
+    .text-block{
+        margin-bottom: 0;
+    }
+
+    .description{
+        flex-direction: row;
+        align-items: center;
+    }
+    .img-description{
+        margin: 0;
+    }
 }

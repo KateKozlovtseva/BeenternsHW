@@ -43,5 +43,11 @@
 
 /*Desktop*/
 @media(min-width:1440px){
-
+    .footer{
+        display: flex;
+        justify-content: space-between;
+    }
+    .copy{
+        margin: 0;
+    }
 }
