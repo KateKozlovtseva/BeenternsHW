@@ -15,6 +15,10 @@
     margin-bottom: 8px;
 }
 
+.link:hover{
+    color:white;
+}
+
 .copy{
     margin-top: 10px;
     margin-bottom: 0;
