@@ -93,10 +93,10 @@
             <div class = "form-content">
                 <p class="form-text">Sign up for our email newsletter and get the latest our company news.<br>
                     Get free trial for 3 month.</p>
-                <form class="input-form">
+                <form class="input-form" action="/posturl/newsletter/" method="POST">
                     <div class="inputs">
                         <div class="fullinput">
-                            <input type="text" placeholder="Name">
+                            <input type="text" placeholder="Name" pattern="[A-Za-z]{2,30}">
                             <img src="./img/user.svg">
                         </div>
 
