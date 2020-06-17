@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Example</title>
+      <link rel="stylesheet" type="text/css" href="./style.css" />
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap" rel="stylesheet">
+  </head>
+
+  <body class = "main">
+
+    <div class = "img-area">
+      <img id="heart" class="heart" src="./heart.jpg">
+      <div class="blure"></div>
+    </div>
+
+    <section class = "container">
+
+    <p>Settings:</p>
+
+    <div class= "input-area">
+      <div>
+        <input  type="range" id="size" oninput="fun1()" name="size"
+              min="50" max="200" value="100" step="10">
+        <label for="size">Size</label>
+      </div>
+      <input type="text" id="i1">
+    </div>
+
+    <div class= "input-area">
+      <div>
+        <input type="range" id="blur" oninput="fun2()" name="blur" 
+              min="0" max="10" value="0" step="1">
+        <label for="blur">Blur</label>
+      </div>
+      <input type="text" id="i2">
+    </div>
+
+    </section>
+
+    <section class="elements">
+
+      <div class="element-area" id="element-area1">
+        <div class="element-area-img">
+          <img class="say" src="./say.png">
+          <img class="enot" src="./enot5.png">
+        </div>
+        <batton id="button1" class="button-event">Click</batton>
+
+    </div>
+
+
+
+      <div class="element-area" id="element-area2">
+        <div class="element-area-img">
+          <img id="enotsize" class="enot" src="./enot4.png">
+        </div>
+        <batton class="button-event">Mouseenter</batton>
+      </div>
+
+
+
+      <div class="element-area" id="element-area3">
+        <div class="element-area-img">
+          <img id="enotrotate" class="enot" src="./enot3.png">
+        </div>
+        <batton class="button-event">Wheel</batton>
+      </div>
+
+
+      <div class="element-area" id="element-area4">
+        <div class="element-area-img">
+          <img id="dblenot" class="enot" src="./enot1.png">
+        </div>
+        <batton class="button-event">Dblclick</batton>
+      </div>
+
+
+      <div class="element-area" id="element-area5">
+        <div class="element-area-img">
+          <div class="textmenu">Контекстное меню отключено</div>
+          <img id="enotrotate2" class="enot" src="./enot2.png">
+        </div>
+        <batton class="button-event">Contextmenu</batton>
+      </div>
+
+
+    </section>
+  </body>
+
+  <script src="./script.js"></script>
+</html>
