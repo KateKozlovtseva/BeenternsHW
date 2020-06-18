@@ -1,20 +1,24 @@
-let i1 = document.getElementById('i1');
-let rng = document.getElementById('size');
-let im = document.getElementsByClassName('heart')[0];
+const i1 = document.getElementById('i1');
+const rng = document.getElementById('size');
+const im = document.getElementsByClassName('heart')[0];
+
 rng.oninput = function fun1() {
     i1.value = `${rng.value} %`;
     im.style.width = `${rng.value}%`;
 }
-let i2 = document.getElementById('i2');
-let rng2 = document.getElementById('blur');
+
+const i2 = document.getElementById('i2');
+const rng2 = document.getElementById('blur');
+
 rng2.oninput = function fun2() {
     i2.value=`${rng2.value} px`;
     im.style.filter = `blur(${rng2.value}px)`;
 }
 
 // Hover
+
 function hoverFunc(event) {
-    if(event.target.classList && event.target.classList.contains('element-area')){
+    if(event.target.classList?.contains('element-area')){
         const container = event.target.querySelector('.element-area-img');
         container.style.backgroundColor = "#FEC30F";
     }  
@@ -31,7 +35,8 @@ document.addEventListener('mouseenter', hoverFunc, {capture: true});
 document.addEventListener('mouseleave', hoverFuncZero, {capture: true});
 
 // Обработка события click
-let say = document.querySelector('.say');
+const say = document.querySelector('.say');
+
 document.getElementById('element-area1').addEventListener('click', {
     shouldDisplay: false,
     handleEvent(event) { 
@@ -46,7 +51,8 @@ document.getElementById('element-area1').addEventListener('click', {
   });
 
 // Обработка события mouseenter & mouseleave
-let enotSize = document.getElementById('enotsize');
+const enotSize = document.getElementById('enotsize');
+
 document.getElementById('element-area2').addEventListener('mouseenter', {
     handleEvent (event) {
         enotSize.style.width = '150%';    
@@ -61,7 +67,8 @@ document.getElementById('element-area2').addEventListener('mouseleave', {
 
 // Обработка события wheel
 let deg = 0;
-let enotRotate = document.getElementById('enotrotate');
+const enotRotate = document.getElementById('enotrotate');
+
 document.getElementById('element-area3').addEventListener('wheel', {
     handleEvent (event) {
         enotRotate.style.transform = `rotate(${deg}deg)`; 
@@ -76,7 +83,8 @@ document.getElementById('element-area3').addEventListener('mouseleave', {
 });
 
 // Обработка события dblclick
-let dblEnot = document.getElementById('dblenot');
+const dblEnot = document.getElementById('dblenot');
+
 document.getElementById('element-area4').addEventListener('dblclick', {
     shouldMirror: false,
     handleEvent(event) { 
@@ -91,7 +99,8 @@ document.getElementById('element-area4').addEventListener('dblclick', {
   });
 
 // Обработка события contextmenu
-let textMenu = document.querySelector('.textmenu');
+const textMenu = document.querySelector('.textmenu');
+
 document.getElementById('element-area5').addEventListener('contextmenu', {
     shouldDisplayText: false,
     handleEvent(event) { 
