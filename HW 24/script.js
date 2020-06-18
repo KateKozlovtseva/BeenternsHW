@@ -1,114 +1,106 @@
-
-function fun1() {
-    let rng=document.getElementById('size'); //rng - это ползунок
-    let i1=document.getElementById('i1'); // i1 - input
-    let im=document.getElementsByClassName('heart')[0];
-    i1.value=`${rng.value} %`;
+let i1 = document.getElementById('i1');
+let rng = document.getElementById('size');
+let im = document.getElementsByClassName('heart')[0];
+rng.oninput = function fun1() {
+    i1.value = `${rng.value} %`;
     im.style.width = `${rng.value}%`;
 }
-
-function fun2() {
-    let rng2=document.getElementById('blur'); //rng - это ползунок
-    let i2=document.getElementById('i2'); // i1 - input
-    let im2=document.getElementById('heart');
+let i2 = document.getElementById('i2');
+let rng2 = document.getElementById('blur');
+rng2.oninput = function fun2() {
     i2.value=`${rng2.value} px`;
-    im2.style.filter = `blur(${rng2.value}px)`;
+    im.style.filter = `blur(${rng2.value}px)`;
 }
 
+// Hover
 function hoverFunc(event) {
     if(event.target.classList && event.target.classList.contains('element-area')){
         const container = event.target.querySelector('.element-area-img');
         container.style.backgroundColor = "#FEC30F";
-    }
-    
+    }  
 }
+
 function hoverFuncZero(event) {
-    if(event.target.classList && event.target.classList.contains('element-area')){
+    if(event.target.classList?.contains('element-area')){ // аналогично event.target.classList && event.target.classList.contains('element-area')
         const container = event.target.querySelector('.element-area-img');
         container.style.backgroundColor = "white";
-    }
-    
+    }  
 }
 
 document.addEventListener('mouseenter', hoverFunc, {capture: true});
 document.addEventListener('mouseleave', hoverFuncZero, {capture: true});
 
-
-
 // Обработка события click
-
+let say = document.querySelector('.say');
 document.getElementById('element-area1').addEventListener('click', {
     shouldDisplay: false,
     handleEvent(event) { 
     if (this.shouldDisplay) {
-        document.querySelector('.say').style.display = 'none';
+        say.style.display = 'none';
     }
     else{
-        document.querySelector('.say').style.display = 'block';
+        say.style.display = 'block';
     }
     this.shouldDisplay = !this.shouldDisplay;
     } 
   });
 
-
-
 // Обработка события mouseenter & mouseleave
-
+let enotSize = document.getElementById('enotsize');
 document.getElementById('element-area2').addEventListener('mouseenter', {
     handleEvent (event) {
-        document.getElementById('enotsize').style.width = '150%';    
+        enotSize.style.width = '150%';    
     }
 });
 
 document.getElementById('element-area2').addEventListener('mouseleave', {
     handleEvent (event) {
-        document.getElementById('enotsize').style.width = '100%';    
+        enotSize.style.width = '100%';    
     }
 });
 
 // Обработка события wheel
-
 let deg = 0;
+let enotRotate = document.getElementById('enotrotate');
 document.getElementById('element-area3').addEventListener('wheel', {
     handleEvent (event) {
-        document.getElementById('enotrotate').style.transform = `rotate(${deg}deg)`; 
+        enotRotate.style.transform = `rotate(${deg}deg)`; 
         deg += 5;
     }
 });
 
 document.getElementById('element-area3').addEventListener('mouseleave', {
     handleEvent (event) {
-        document.getElementById('enotrotate').style.transform = `rotate(0deg)`;    
+        enotRotate.style.transform = `rotate(0deg)`;    
     }
 });
 
 // Обработка события dblclick
-
+let dblEnot = document.getElementById('dblenot');
 document.getElementById('element-area4').addEventListener('dblclick', {
     shouldMirror: false,
     handleEvent(event) { 
     if (this.shouldMirror) {
-        document.getElementById('dblenot').style.transform = 'scale(1, 1)';
+        dblEnot.style.transform = 'scale(1, 1)';
     }
     else{
-        document.getElementById('dblenot').style.transform = 'scale(1, -1)';
+        dblEnot.style.transform = 'scale(1, -1)';
     }
     this.shouldMirror = !this.shouldMirror;
     } 
   });
 
-
-// Обработка события keypress
-
+// Обработка события contextmenu
+let textMenu = document.querySelector('.textmenu');
 document.getElementById('element-area5').addEventListener('contextmenu', {
     shouldDisplayText: false,
     handleEvent(event) { 
     document.addEventListener('contextmenu', event => event.preventDefault());
     if (this.shouldDisplayText) {
-        document.querySelector('.textmenu').style.display = 'none';
+        textMenu.style.display = 'none';
     }
     else{
-        document.querySelector('.textmenu').style.display = 'block';
+        textMenu.style.display = 'block';
     }
     this.shouldDisplayText = !this.shouldDisplayText;
     } 
