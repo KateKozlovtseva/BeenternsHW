@@ -3,8 +3,10 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 0 94px;
+    flex-wrap: wrap;
+    width: 100%;
     z-index: 1;
+    margin-top: 150px;
 }
 
 h1{
@@ -14,13 +16,23 @@ h1{
     margin-bottom: 20px;
 }
 
-/*h1::after{
-    content: "+";
-    
-}*/
-
+.speaker_description{
+    padding-left: 24px;
+}
 .secondary_batton{
     background-color: black;
+}
+
+.secondary-price{
+font-size: 40px;
+margin-right: 34px;
+color: black;
+}
+
+.secondary-comment{
+    color: #7B7B7B;
+    font-size: 13px;
+    margin-top: 14px;
 }
 
 .find_color{
