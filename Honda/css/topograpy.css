@@ -1,0 +1,36 @@
+/*Mobile*/
+
+body{
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 15px;
+    margin: 0;
+    background-color: teal;
+    color: white;
+}
+
+h1{
+ font-size: 25px;
+ font-weight: bold;
+ color: white;
+ line-height: 120%;
+ margin: 0;
+}
+
+
+/*Tablet*/
+
+@media(min-width:768px){
+    body{
+        font-size: 18px;
+    }
+
+    h1{
+        font-size: 90px;
+    }
+}
+
+
+/*Desktop*/
+@media(min-width:1440px){
+
+}
