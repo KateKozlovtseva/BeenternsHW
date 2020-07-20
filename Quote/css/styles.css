@@ -43,22 +43,31 @@ h2{
 
 
 
-.tab input[type="checkbox"] { 
-    display: none; 
+.tab input[type="checkbox"] {
+    display: none;
 }
 
 .tab-title {
-    background: #F5F5F5; 
-    padding: 15px 18px; 
-    border: 1px solid #E8E8E8; 
-    border-bottom: none; 
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    background: #F5F5F5;
+    padding: 15px 18px;
+    border: 1px solid #E8E8E8;
+    border-bottom: none;
     box-sizing: border-box;
-    display: inline;
 }
 
 .tab-title::before{
-    content: url(../img/Shape_right.svg);
-    margin: 20px 10px 20px 0;
+    content:'';
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-top: 0.5px solid rgba(0, 0, 0, 0.6);
+    border-right: 0.5px solid rgba(0, 0, 0, 0.6);
+    transform: rotate(45deg);
+    /* content: url(../img/Shape_right.svg); */
+    margin: 20px 20px 20px 0;
 }
 
 .row{
@@ -70,11 +79,11 @@ h2{
     display: none;
 }
 
-.tab-content { 
-    border: 1px solid #E8E8E8; 
-    padding: 10px 40px 10px 20px; 
-    left: 0; 
-    display: none; 
+.tab-content {
+    border: 1px solid #E8E8E8;
+    padding: 10px 40px 10px 20px;
+    left: 0;
+    display: none;
     color: #5D5D5D;
 }
 
@@ -90,12 +99,19 @@ h2{
 }
 
 .tab :checked ~ .tab-title::before {
-    content: url(../img/Shape_down.svg);
-    margin: 20px 6px 20px 0;
+    content:'';
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-top: 0.5px solid rgba(0, 0, 0, 0.6);
+    border-right: 0.5px solid rgba(0, 0, 0, 0.6);
+    transform: rotate(135deg);
+    margin: 20px 20px 20px 0;
+    /* content: url(../img/Shape_down.svg); */
 }
 
 .tab :checked ~ .tab-content {
-    display: block; 
+    display: block;
 }
 
 .illustration{
@@ -128,4 +144,3 @@ h2{
     }
 
    }
-  
