@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Neucha&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script>
+    <script src="/script.js"></script>
+</head>
+
+<body class="content">
+    <h1 class="main-text">Мы используем cookie!</h1>
+    <div class="img-wrapper">
+        <img class="cool-img" src="./happycookie.jpg" alt="Крутая картинка"/>
+    </div>
+    <form id="dataForm" class="form-content">
+        <div class="inputs">
+            <input class="input-form" name="name" placeholder="ФИО"/>
+            <input class="input-form" name="city" placeholder="Город"/>
+            <input class="input-form" name="age" placeholder="Возраст"/>
+        </div>
+        <div class="checks">
+            <div class="checkbox-line">
+                <input type="checkbox" name="checkbox1" class="check-box" id="checkbox1"/>
+                <label class= "checkbox-lable" for="checkbox1">Хочу на море!</label>
+            </div>
+            <div class="checkbox-line">
+                <input type="checkbox" name="checkbox2" class="check-box" id="checkbox2"/>
+                <label class= "checkbox-lable" for="checkbox2">Хочу в горы!</label>
+            </div>
+            <div class="checkbox-line">
+                <input type="checkbox" name="checkbox3" class="check-box" id="checkbox3"/>
+                <label class= "checkbox-lable" for="checkbox3">Хочу работать!</label>
+            </div>
+        </div>
+        <button type="submit" class="activ-button">Сохранить</button>
+    </form>
+
+    <div class="checkbox-line last-line">
+        <input type="checkbox" id="methodToggle" class="check-box"/>
+        <label class= "checkbox-lable" for="methodToggle">Хочу использовать хранилище LocalStorage</label>
+    </div>
+</body>
+</html>
