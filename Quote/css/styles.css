@@ -1,0 +1,146 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+a{
+    color: #0179FF;
+}
+
+.content{
+    width: 100%;
+}
+
+
+h1{
+    color: black;
+    font-size: 35px;
+}
+
+h2{
+    font-size: 15px;
+}
+
+
+.header{
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tabs{
+    max-width: 640px;
+    padding:0;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.tab, .tab-title {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.tab input[type="checkbox"] {
+    display: none;
+}
+
+.tab-title {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    background: #F5F5F5;
+    padding: 15px 18px;
+    border: 1px solid #E8E8E8;
+    border-bottom: none;
+    box-sizing: border-box;
+}
+
+.tab-title::before{
+    content:'';
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-top: 0.5px solid rgba(0, 0, 0, 0.6);
+    border-right: 0.5px solid rgba(0, 0, 0, 0.6);
+    transform: rotate(45deg);
+    /* content: url(../img/Shape_right.svg); */
+    margin: 20px 20px 20px 0;
+}
+
+.row{
+    position: relative;
+    list-style: none;
+}
+
+.row::marker {
+    display: none;
+}
+
+.tab-content {
+    border: 1px solid #E8E8E8;
+    padding: 10px 40px 10px 20px;
+    left: 0;
+    display: none;
+    color: #5D5D5D;
+}
+
+.row::before {
+    content:" ";
+    position: absolute;
+    left: -10px;
+    top: 10px;
+    border-left: 2px solid #0179FF;
+    height: auto;
+    bottom: 0;
+    width: 1px;
+}
+
+.tab :checked ~ .tab-title::before {
+    content:'';
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-top: 0.5px solid rgba(0, 0, 0, 0.6);
+    border-right: 0.5px solid rgba(0, 0, 0, 0.6);
+    transform: rotate(135deg);
+    margin: 20px 20px 20px 0;
+    /* content: url(../img/Shape_down.svg); */
+}
+
+.tab :checked ~ .tab-content {
+    display: block;
+}
+
+.illustration{
+    max-width: 510px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.illustration img{
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 320px) {
+
+    body{
+        margin: 0;
+    }
+
+    h1{
+        margin-left: 20px;
+    }
+
+    .row::before{
+        left:0px;
+    }
+
+    .content{
+        width: 100vw;
+    }
+
+   }
