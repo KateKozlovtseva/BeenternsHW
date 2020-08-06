@@ -1,0 +1,59 @@
+.beats{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    width: 100%;
+    margin-bottom: 70px;
+    z-index: 1;
+}
+
+.beats_card{
+    width: 393px;
+    height: 560px;
+    background-color:#F8F8F9;
+    position: relative;
+}
+
+.beats_img{
+    height: 100%;
+    width: auto;
+}
+
+.beats-name{
+    margin-bottom: 4px;
+}
+.beats-describe{
+    margin: 0; max-width: 267px;
+}
+
+.beats_description{
+    position: absolute;
+    z-index: 2;
+    bottom: 43px;
+    left: 49px;
+}
+
+.beats_buy{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.beats_button{
+    background-color: black;
+    padding: 12px 31px;
+}
+.secondary_price{
+    color: #9D8220;
+    font-size: 25px;
+    margin-right: 20px;
+}
+
+.beats_img_wrap{
+    height: 100%;
+    width: 100%
+    z-index: 1;
+}

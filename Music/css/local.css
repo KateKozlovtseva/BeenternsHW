@@ -1,0 +1,32 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    margin: 0;
+}
+.link{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+button{
+    border: none;
+    border-radius: 100px;
+    text-transform: uppercase;
+    padding: 12px 48px;
+    font-size: 14px;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+}
+
+.small-container{
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
